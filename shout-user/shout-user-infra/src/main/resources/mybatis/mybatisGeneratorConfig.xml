@@ -8,7 +8,7 @@
 
     <context id="context" targetRuntime="MyBatis3">
         <!-- 这里引入分页扩展插件 -->
-        <plugin type="com.hans.jhd.service.user.jhd.infra.repository.commom.utils.PaginationPlugin" />
+        <plugin type="com.allen.shout.user.infra.repository.utils.PaginationPlugin" />
 
         <commentGenerator>
             <!-- This property is used to specify whether MBG will include any coments in the generated code -->
@@ -17,7 +17,7 @@
             <property name="suppressDate" value="false"/>
         </commentGenerator>
 
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/beta_service_user_jhd"
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://120.77.203.140:3306/beta_service_user_jhd"
                         userId="root" password="root"/>
 
         <javaTypeResolver>
