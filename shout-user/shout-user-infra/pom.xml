@@ -38,9 +38,9 @@
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
                 <dependencies>
                     <dependency>
-                        <groupId>com.allen.shout.user</groupId>
-                        <artifactId>shout-user-infra</artifactId>
-                        <version>${project.parent.version}</version>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>5.1.34</version>
                     </dependency>
                 </dependencies>
                 <configuration>
