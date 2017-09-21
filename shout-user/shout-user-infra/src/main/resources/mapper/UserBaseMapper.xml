@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.allen.shout.user.infra.repository.mapper.UserBaseMapper">
+    <!--目的：为Dao接口方法提供SQL语句-->
+
+    <!--映射实体对象-->
+    <resultMap id="UserBaseResultMap" type="com.allen.shout.user.core.domain.UserBase">
+        <id property="id" column="id" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="selectById" resultMap="UserBaseResultMap">
+        SELECT * FROM user_base WHERE id = #{id}
+    </select>
+
+</mapper>

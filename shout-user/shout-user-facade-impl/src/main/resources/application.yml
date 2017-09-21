@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://120.77.203.140:3306/shout_user?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: uAiqwVwjJ8-i
+    driver-class-name: com.mysql.jdbc.Driver
+    initialSize: 1
+    minIdle: 1
+    maxActive: 5
+    maxWait: 60000
+    removeAbandoned: true
+    removeAbandonedTimeout: 120000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: true
+    testOnReturn: true
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,log4j
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
