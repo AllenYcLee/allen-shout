@@ -19,7 +19,8 @@ import java.util.Properties;
 @ConfigurationProperties(prefix = "spring.datasource")
 public class DruidConfig {
     private Logger logger = LoggerFactory.getLogger(DruidConfig.class);
-    private String dbUrl;
+    private String dbType;
+    private String url;
     private String username;
     private String password;
     private String driverClassName;
@@ -40,13 +41,28 @@ public class DruidConfig {
     private String filters;
     private Properties connectionProperties;
 
-
-    public String getDbUrl() {
-        return dbUrl;
+    public Logger getLogger() {
+        return logger;
     }
 
-    public void setDbUrl(String dbUrl) {
-        this.dbUrl = dbUrl;
+    public void setLogger(Logger logger) {
+        this.logger = logger;
+    }
+
+    public String getDbType() {
+        return dbType;
+    }
+
+    public void setDbType(String dbType) {
+        this.dbType = dbType;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public String getUsername() {
@@ -205,7 +221,8 @@ public class DruidConfig {
     @Primary
     public DataSource dataSource(){
         DruidDataSource datasource = new DruidDataSource();
-        datasource.setUrl(dbUrl);
+        datasource.setDbType(dbType);
+        datasource.setUrl(url);
         datasource.setUsername(username);
         datasource.setPassword(password);
         datasource.setDriverClassName(driverClassName);
