@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
     <!-- Class Driver Path -->
-    <classPathEntry location="/Users/karen/maven_repository/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar"/>
+    <classPathEntry location="D:\shoutlib\mysql\mysql-connector-java\5.1.43\mysql-connector-java-5.1.43.jar"/>
 
     <context id="context" targetRuntime="MyBatis3">
         <!-- 这里引入分页扩展插件 -->
@@ -17,7 +17,7 @@
             <property name="suppressDate" value="false"/>
         </commentGenerator>
 
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://120.77.203.140:3306/beta_service_user_jhd"
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://120.77.203.140:3306/shout_user"
                         userId="root" password="root"/>
 
         <javaTypeResolver>
@@ -27,7 +27,7 @@
         </javaTypeResolver>
 
         <javaModelGenerator targetPackage="com.allen.shout.user.jhd.domain"
-                            targetProject="../user-jhd-core/src/main/java">
+                            targetProject="../shout-user-core/src/main/java">
             <!-- This property is used to select whether MyBatis Generator will generate different Java packages for
       the objects based on the catalog nd schema of the introspected table -->
             <property name="enableSubPackages" value="false"/>
@@ -35,14 +35,14 @@
             <property name="trimStrings" value="false"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="mybatis.mappers"
+        <sqlMapGenerator targetPackage="mappers"
                          targetProject="./src/main/resources">
             <!-- This property is used to select whether MyBatis Generator will generate different Java packages for
       the objects based on the catalog and schema of the introspected table -->
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator targetPackage="com.allen.shout.user.infra.repository.sql"
+        <javaClientGenerator targetPackage="com.allen.shout.user.infra.repository.mapper"
                              targetProject="./src/main/java" type="XMLMAPPER">
             <!-- This property is used to select whether MyBatis Generator will generate different Java packages for
       the objects based on the catalog and schema of the introspected table -->
