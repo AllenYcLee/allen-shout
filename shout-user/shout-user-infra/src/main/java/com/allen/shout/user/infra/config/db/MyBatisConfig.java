@@ -26,7 +26,7 @@ public class MyBatisConfig {
     public SqlSessionFactory sqlSessionFactoryBean(){
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource);
-        ResourcePatternResolver resolver = (ResourcePatternResolver) new PathMatchingResourcePatternResolver();
+        ResourcePatternResolver resolver =  new PathMatchingResourcePatternResolver();
         String mapperLocations = ResourcePatternResolver.CLASSPATH_ALL_URL_PREFIX+"mapper/*.xml";
         try {
             Resource[] resources =  resolver.getResources(mapperLocations);
