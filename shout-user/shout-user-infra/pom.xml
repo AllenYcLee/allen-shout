@@ -59,9 +59,9 @@
                 <version>1.3.5</version>
                 <dependencies>
                     <dependency>
-                        <groupId>com.allen.shout.user</groupId>
-                        <artifactId>shout-user-infra</artifactId>
-                        <version>${project.parent.version}</version>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>5.1.43</version>
                     </dependency>
                 </dependencies>
                 <configuration>

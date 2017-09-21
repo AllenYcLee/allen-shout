@@ -8,16 +8,16 @@
 
     <context id="context" targetRuntime="MyBatis3">
         <!-- 这里引入分页扩展插件 -->
-        <plugin type="com.allen.shout.user.infra.repository.utils.PaginationPlugin" />
+        <!--<plugin type="com.allen.shout.user.infra.repository.utils.PaginationPlugin" />-->
 
         <commentGenerator>
             <!-- This property is used to specify whether MBG will include any coments in the generated code -->
-            <property name="suppressAllComments" value="true"/>
+            <property name="suppressAllComments" value="false"/>
             <!-- This property is used to specify whether MBG will include the generation timestamp in the generated comments -->
-            <property name="suppressDate" value="false"/>
+            <property name="suppressDate" value="true"/>
         </commentGenerator>
 
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://120.77.203.140:3306/shout_user"
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/shout_user?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false"
                         userId="root" password="root"/>
 
         <javaTypeResolver>
@@ -26,7 +26,7 @@
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.allen.shout.user.jhd.domain"
+        <javaModelGenerator targetPackage="com.allen.shout.user.core.domain"
                             targetProject="../shout-user-core/src/main/java">
             <!-- This property is used to select whether MyBatis Generator will generate different Java packages for
       the objects based on the catalog nd schema of the introspected table -->
@@ -49,12 +49,10 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
-		<table tableName="ranking_list" domainObjectName="A111111" enableCountByExample="true" enableDeleteByExample="false"
-               enableSelectByExample="true"
-               enableUpdateByExample="true">
-            <columnOverride column="state" property="state" jdbcType="TINYINT" javaType="java.lang.Integer"></columnOverride>
-            <columnOverride column="status" property="status" jdbcType="TINYINT" javaType="java.lang.Integer"></columnOverride>
-            <columnOverride column="type" property="type" jdbcType="TINYINT" javaType="java.lang.Integer"></columnOverride>
+		<table tableName="user_base" domainObjectName="UserBase2" enableCountByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"
+               enableUpdateByExample="false">
+            <columnOverride column="id" property="id" jdbcType="VARCHAR" javaType="java.lang.String"></columnOverride>
 		</table>
 
 

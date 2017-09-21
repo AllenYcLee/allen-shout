@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.allen.shout.user.infra.repository.mapper.UserBaseMapper">
+<mapper namespace="com.allen.shout.user.infra.repository.mappers.UserBaseMapper">
     <!--目的：为Dao接口方法提供SQL语句-->
 
     <!--映射实体对象-->
