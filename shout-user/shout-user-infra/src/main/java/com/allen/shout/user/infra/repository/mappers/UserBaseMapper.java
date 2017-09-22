@@ -1,4 +1,4 @@
-package com.allen.shout.user.infra.repository.mapper;
+package com.allen.shout.user.infra.repository.mappers;
 
 import com.allen.shout.user.core.domain.UserBase;
 import org.apache.ibatis.annotations.Mapper;

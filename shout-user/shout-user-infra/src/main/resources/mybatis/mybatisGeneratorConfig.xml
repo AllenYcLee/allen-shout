@@ -42,7 +42,7 @@
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator targetPackage="com.allen.shout.user.infra.repository.mapper"
+        <javaClientGenerator targetPackage="com.allen.shout.user.infra.repository.mappers"
                              targetProject="./src/main/java" type="XMLMAPPER">
             <!-- This property is used to select whether MyBatis Generator will generate different Java packages for
       the objects based on the catalog and schema of the introspected table -->

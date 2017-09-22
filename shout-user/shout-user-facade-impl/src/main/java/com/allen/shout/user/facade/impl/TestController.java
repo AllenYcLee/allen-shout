@@ -1,9 +1,8 @@
 package com.allen.shout.user.facade.impl;
 
 import com.allen.shout.user.core.domain.UserBase;
-import com.allen.shout.user.infra.repository.mapper.UserBaseMapper;
+import com.allen.shout.user.infra.repository.mappers.UserBaseMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
