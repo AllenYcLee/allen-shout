@@ -8,7 +8,7 @@
 
     <context id="context" targetRuntime="MyBatis3">
         <!-- 这里引入分页扩展插件 -->
-        <!--<plugin type="com.allen.shout.user.infra.repository.utils.PaginationPlugin" />-->
+        <plugin type="com.allen.shout.user.infra.repository.utils.PaginationPlugin" />
 
         <commentGenerator>
             <!-- This property is used to specify whether MBG will include any coments in the generated code -->

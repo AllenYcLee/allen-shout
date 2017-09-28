@@ -9,6 +9,7 @@ import org.mybatis.generator.api.dom.java.*;
 import org.mybatis.generator.api.dom.xml.Attribute;
 import org.mybatis.generator.api.dom.xml.TextElement;
 import org.mybatis.generator.api.dom.xml.XmlElement;
+import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
 
@@ -81,7 +82,7 @@ public class PaginationPlugin extends PluginAdapter {
 	}
 	public static void generate() {
 		String config = PaginationPlugin.class.getClassLoader().getResource(
-				"mybatisConfig.xml").getFile();
+				"mybatis/mybatisGeneratorConfig.xml").getFile();
 		String[] arg = { "-configfile", config, "-overwrite" };
 		ShellRunner.main(arg);
 	}

@@ -68,6 +68,11 @@
                         <artifactId>mysql-connector-java</artifactId>
                         <version>5.1.43</version>
                     </dependency>
+                    <dependency>
+                        <groupId>com.allen.shout.user</groupId>
+                        <artifactId>shout-user-infra</artifactId>
+                        <version>1.0-SNAPSHOT</version>
+                    </dependency>
                 </dependencies>
                 <configuration>
                     <verbose>true</verbose>

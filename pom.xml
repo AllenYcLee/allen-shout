@@ -123,5 +123,17 @@
         <!--</dependency>-->
 
     </dependencies>
-
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Nexus Releases</name>
+            <url>http://localhost:8081/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>snapshots</id>
+            <name>Nexus Snapshots</name>
+            <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
