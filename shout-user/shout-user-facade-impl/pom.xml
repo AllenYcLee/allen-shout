@@ -39,6 +39,11 @@
             <artifactId>shout-user-infra</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.allen.shout.common</groupId>
+            <artifactId>shout-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <!--<build>-->
