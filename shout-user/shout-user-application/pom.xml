@@ -29,10 +29,5 @@
             <artifactId>shout-user-core</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.allen.shout.user</groupId>
-            <artifactId>shout-user-infra</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
     </dependencies>
 </project>

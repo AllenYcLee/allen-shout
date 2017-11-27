@@ -7,7 +7,7 @@ import com.allen.shout.user.core.domain.UserBase;
  * @DATE Created in 2017/11/27/027
  * @Description
  */
-public interface UserBaseApplication {
+public interface IUserBaseApplication {
 
     UserBase test();
 }
