@@ -13,6 +13,6 @@ public class UserBaseApplication implements IUserBaseApplication {
 
     @Override
     public UserBase test() {
-        return userBase.test();
+        return userBase.selectById();
     }
 }
