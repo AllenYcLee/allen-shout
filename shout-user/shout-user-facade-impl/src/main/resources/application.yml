@@ -1,9 +1,10 @@
 spring:
+# 数据库连接
   datasource:
     dbType: mysql
     url: jdbc:mysql://120.77.203.140:3306/shout_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
-    password: ******
+    password: D9uPnCE8rfAVzvkfdbs3yQ==
     driverClassName: com.mysql.jdbc.Driver
     initialSize: 1
     minIdle: 1
@@ -21,3 +22,17 @@ spring:
     maxPoolPreparedStatementPerConnectionSize: 20
     filters: stat,wall,log4j
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+# Dubbo 服务提供者配置
+  dubbo:
+      application:
+        name: shout-user
+      registry:
+        address: zookeeper://127.0.0.1:2181
+      protocol:
+        name: dubbo
+        port: 8145
+        threads: 100
+      scan: com.allen.shout.user.facade.impl
+# 内置web服务器配置
+server:
+  port: 8021

@@ -1,15 +1,17 @@
 package com.allen.shout.user.core.domain;
 
 
-public class UserBase {
+import com.allen.shout.common.domain.Entity;
 
-    private String id;
+public class UserBase extends Entity {
 
-    public String getId() {
-        return id;
+    private String name;
+
+    public String getName() {
+        return name;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setName(String name) {
+        this.name = name;
     }
 }

@@ -5,8 +5,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.data.repository.query.Param;
 
 @Mapper
-public interface
-UserBaseMapper {
+public interface UserBaseMapper {
 
     UserBase selectById(@Param("id")String id);
 }
