@@ -6,7 +6,6 @@ import com.allen.shout.user.core.repository.IUserBaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.xml.ws.soap.Addressing;
 
 @Component
 public class UserBase extends Entity {

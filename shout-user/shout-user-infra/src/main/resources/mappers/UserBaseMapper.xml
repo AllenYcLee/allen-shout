@@ -8,6 +8,8 @@
     <!--映射实体对象-->
     <resultMap id="UserBaseResultMap" type="com.allen.shout.user.core.domain.UserBase">
         <id property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="sort" column="sort" jdbcType="BIGINT"/>
     </resultMap>
 
     <select id="selectById" resultMap="UserBaseResultMap">
