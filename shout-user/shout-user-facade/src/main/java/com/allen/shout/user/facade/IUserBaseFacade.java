@@ -1,6 +1,6 @@
 package com.allen.shout.user.facade;
 
-        import com.allen.shout.user.core.domain.UserBase;
+        import com.allen.shout.user.facade.dto.UserBaseDTO;
 
 /**
  * @Author yuanchen.li
@@ -9,5 +9,5 @@ package com.allen.shout.user.facade;
  */
 public interface IUserBaseFacade {
 
-    UserBase test();
+    UserBaseDTO test();
 }

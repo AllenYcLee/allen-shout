@@ -1,8 +1,8 @@
 package com.allen.shout.gateway.base.service;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.allen.shout.user.core.domain.UserBase;
 import com.allen.shout.user.facade.IUserBaseFacade;
+import com.allen.shout.user.facade.dto.UserBaseDTO;
 import org.springframework.stereotype.Component;
 
 /**
@@ -18,7 +18,7 @@ public class UserBaseService {
     private IUserBaseFacade userBaseFacade;
 
 
-    public UserBase test() {
+    public UserBaseDTO test() {
         return userBaseFacade.test();
     }
 
