@@ -16,6 +16,8 @@
     <modules>
         <module>shout-user</module>
         <module>shout-common</module>
+        <module>shout-gateway</module>
+        <module>shout-gateway</module>
     </modules>
     <packaging>pom</packaging>
 

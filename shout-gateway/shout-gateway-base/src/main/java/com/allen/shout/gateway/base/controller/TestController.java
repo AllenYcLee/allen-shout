@@ -1,8 +1,7 @@
-package com.allen.shout.user.facade.impl;
+package com.allen.shout.gateway.base.controller;
 
+import com.allen.shout.gateway.base.service.UserBaseService;
 import com.allen.shout.user.core.domain.UserBase;
-import com.allen.shout.user.facade.IUserBaseFacade;
-import com.allen.shout.user.infra.repository.mappers.UserBaseMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,10 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @Autowired
-    private IUserBaseFacade userBaseFacade;
+    private UserBaseService userBaseService;
 
     @RequestMapping("/hello")
     public UserBase test(){
-        return userBaseFacade.test();
+        return userBaseService.test();
     }
 }
