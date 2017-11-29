@@ -24,15 +24,17 @@ spring:
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 # Dubbo 服务提供者配置
   dubbo:
-      application:
-        name: shout-user
-      registry:
-        address: zookeeper://127.0.0.1:2181
-      protocol:
-        name: dubbo
-        port: 8145
-        threads: 100
-      scan: com.allen.shout.user.facade.impl
+    application:
+      name: shout-user
+    registry:
+      address: zookeeper://127.0.0.1:2181
+    protocol:
+      name: dubbo
+      port: 8145
+      threads: 100
+    scan: com.allen.shout.user.facade.impl
 # 内置web服务器配置
 server:
   port: 8021
+logging:
+  config: classpath.log4j.properties
