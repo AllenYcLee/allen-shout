@@ -6,6 +6,8 @@ spring:
       registry:
         address: zookeeper://127.0.0.1:2181
       scan: com.allen.shout.gateway.base.service
+  profiles:
+      active: dev
 # 内置web服务器配置
 server:
   port: 8022

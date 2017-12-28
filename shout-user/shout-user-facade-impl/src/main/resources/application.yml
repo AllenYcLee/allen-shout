@@ -33,9 +33,8 @@ spring:
       port: 8145
       threads: 100
     scan: com.allen.shout.user.facade.impl
+  profiles:
+    active: dev
 # 内置web服务器配置
 server:
   port: 8021
-logging:
-  config:
-    classpath: log4j.properties

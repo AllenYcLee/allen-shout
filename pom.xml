@@ -25,6 +25,7 @@
         <!--<spring-framework.version>4.3.10.RELEASE</spring-framework.version>-->
         <!--<mybatis.version>3.3.5</mybatis.version>-->
         <!--<mybatis-spring.version>1.2.3</mybatis-spring.version>-->
+        <lombok.version>1.16.18</lombok.version>
         <fastjson.version>1.2.41</fastjson.version>
         <java.version>1.7</java.version>
         <dubbo-spring-boot>1.0.0</dubbo-spring-boot>
@@ -40,16 +41,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-logging</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -82,6 +73,14 @@
             <artifactId>fastjson</artifactId>
             <version>${fastjson.version}</version>
         </dependency>
+        <!-- tools -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
         <!-- dubbo begin -->
         <!--<dependency>-->
             <!--<groupId>com.alibaba</groupId>-->
