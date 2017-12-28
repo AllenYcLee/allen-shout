@@ -2,7 +2,7 @@
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
     <contextName>gatewayLog</contextName>
     <springProfile name="dev">
-        <property name="logback.logdir" value="E:\log" />
+        <property name="logback.logdir" value="E:\shout\allen-shout\shout-gateway\log" />
         <property name="logback.appname" value="gateway" />
     </springProfile>
     <springProfile name="prod">

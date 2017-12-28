@@ -3,9 +3,7 @@ package com.allen.shout.user.infra.repository;
 import com.allen.shout.user.core.domain.UserBase;
 import com.allen.shout.user.core.repository.IUserBaseRepository;
 import com.allen.shout.user.infra.repository.mappers.UserBaseMapper;
-import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Component;
 
 @Component
