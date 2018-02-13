@@ -17,7 +17,7 @@
         <module>shout-user</module>
         <module>shout-common</module>
         <module>shout-gateway</module>
-        <module>shout-gateway</module>
+        <module>shout-autocode</module>
     </modules>
     <packaging>pom</packaging>
 

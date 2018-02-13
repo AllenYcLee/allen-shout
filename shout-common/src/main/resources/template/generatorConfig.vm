@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <!-- Class Driver Path -->
+    <classPathEntry location="D:\shoutlib\mysql\mysql-connector-java\5.1.43\mysql-connector-java-5.1.43.jar"/>
+
+    <context id="context" targetRuntime="MyBatis3">
+        <!-- 这里引入分页扩展插件 -->
+        <plugin type="com.allen.shout.user.infra.repository.utils.PaginationPlugin" />
+
+        <commentGenerator>
+            <property name="suppressAllComments" value="false"/>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/shout_user?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false"
+                        userId="root" password="root"/>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.allen.shout.user.core.domain"
+                            targetProject="../shout-user-core/src/main/java">
+            <property name="enableSubPackages" value="false"/>
+            <property name="trimStrings" value="false"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mappers"
+                         targetProject="./src/main/resources">
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator targetPackage="com.allen.shout.user.infra.repository.mappers"
+                             targetProject="./src/main/java" type="XMLMAPPER">
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
+
+		<table tableName="user_base" domainObjectName="UserBase2" enableCountByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"
+               enableUpdateByExample="false">
+            <columnOverride column="id" property="id" jdbcType="VARCHAR" javaType="java.lang.String"></columnOverride>
+		</table>
+
+
+    </context>
+
+
+</generatorConfiguration>
