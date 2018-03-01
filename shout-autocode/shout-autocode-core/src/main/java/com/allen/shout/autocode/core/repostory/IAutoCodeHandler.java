@@ -1,9 +1,10 @@
 package com.allen.shout.autocode.core.repostory;
 
-import com.allen.shout.autocode.core.domain.DataSourceInfo;
+import com.allen.shout.autocode.core.domain.FieldInfo;
 import com.allen.shout.autocode.core.domain.TableInfo;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author yuanchen.li
@@ -12,5 +13,7 @@ import java.util.List;
  */
 public interface IAutoCodeHandler {
 
-    List<TableInfo> buildTableInfo();
+    List<TableInfo> buildTableInfo(List<String> tableNames);
+
+
 }

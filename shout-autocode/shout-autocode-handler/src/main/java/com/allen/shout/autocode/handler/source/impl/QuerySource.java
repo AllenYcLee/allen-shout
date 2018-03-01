@@ -7,7 +7,9 @@ import com.allen.shout.autocode.handler.source.IQuerySource;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author yuanchen.li
@@ -31,7 +33,7 @@ public class QuerySource implements IQuerySource{
     }
 
     @Override
-    public List<TableInfo> queryTableStatus() {
+    public List<TableInfo> queryTableStatus(List<String> tableNames) {
         List<TableInfo> result = new ArrayList<>();
         Connection connection = init();
         PreparedStatement ps = null;
@@ -63,20 +65,24 @@ public class QuerySource implements IQuerySource{
     }
 
     @Override
-    public List<FieldInfo> queryFieldsFull(String tableName) {
-        List<FieldInfo> result = new ArrayList<>();
+    public Map<String, List<FieldInfo>> queryFieldsFull(List<String> tableNames) {
+        Map<String, List<FieldInfo>> result = new HashMap<>();
         Connection connection = init();
         PreparedStatement ps = null;
         try {
-            String sql = String.format(IQuerySource.FIELDS_FULL_SQL, tableName);
-            ps = connection.prepareStatement(sql);
-            ResultSet resultSet = ps.executeQuery();
-            while (resultSet.next()) {
-                FieldInfo fieldInfo = new FieldInfo();
-                fieldInfo.setField(resultSet.getString("field"))
-                        .setComment(resultSet.getString("comment"))
-                        .setType(resultSet.getString("type"));
-                result.add(fieldInfo);
+            for (String tableName : tableNames) {
+                List<FieldInfo> list = new ArrayList<>();
+                String sql = String.format(IQuerySource.FIELDS_FULL_SQL, tableName);
+                ps = connection.prepareStatement(sql);
+                ResultSet resultSet = ps.executeQuery();
+                while (resultSet.next()) {
+                    FieldInfo fieldInfo = new FieldInfo();
+                    fieldInfo.setField(resultSet.getString("field"))
+                            .setComment(resultSet.getString("comment"))
+                            .setType(resultSet.getString("type"));
+                    list.add(fieldInfo);
+                }
+                result.put(tableName, list);
             }
         } catch (Exception e) {
             e.printStackTrace();

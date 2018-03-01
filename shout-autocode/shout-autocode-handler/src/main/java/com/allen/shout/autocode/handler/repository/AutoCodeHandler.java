@@ -1,12 +1,14 @@
 package com.allen.shout.autocode.handler.repository;
 
 import com.allen.shout.autocode.core.domain.DataSourceInfo;
+import com.allen.shout.autocode.core.domain.FieldInfo;
 import com.allen.shout.autocode.core.domain.TableInfo;
 import com.allen.shout.autocode.core.repostory.IAutoCodeHandler;
 import com.allen.shout.autocode.handler.source.IQuerySource;
 import com.allen.shout.autocode.handler.source.impl.QuerySource;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author yuanchen.li
@@ -22,8 +24,11 @@ public class AutoCodeHandler implements IAutoCodeHandler {
     }
 
     @Override
-    public List<TableInfo> buildTableInfo() {
+    public List<TableInfo> buildTableInfo(List<String> tableNames) {
         IQuerySource querySource = new QuerySource(this.dataSourceInfo);
-        return querySource.queryTableStatus();
+        List<TableInfo> tableInfos = querySource.queryTableStatus(tableNames);
+
+        return null;
     }
+
 }
