@@ -38,6 +38,7 @@ public class QuerySource implements IQuerySource{
         Connection connection = init();
         PreparedStatement ps = null;
         try {
+
             ps = connection.prepareStatement(IQuerySource.TABLE_STATUS_SQL);
             ResultSet resultSet = ps.executeQuery();
             while (resultSet.next()) {
